@@ -14,25 +14,29 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mysqlDb"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mysqlDb",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mysqlDb",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mysqlDb",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mysqlDb",
     "public": false
+  },
+  "Client": {
+    "dataSource": "mysqlDb",
+    "public": true
   }
 }
