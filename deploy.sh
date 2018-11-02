@@ -10,7 +10,7 @@ echo "Building image ..."
 
 docker build -t $IMAGE:$CIRCLE_SHA1 -t $IMAGE:latest .
 
-eval $(aws ecr get-login --no-email --region $AWS_DEFAULT_REGION)
+eval $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
 
 docker push $IMAGE:latest
 docker push $IMAGE:$CIRCLE_SHA1
