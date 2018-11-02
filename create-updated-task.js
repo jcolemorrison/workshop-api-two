@@ -8,19 +8,19 @@ const fs = require('fs')
 const { taskDefinition } = require('./base.json')
 
 // The only things we need for the update
-const { family, containerDefinition } = taskDefinition
+const { family, containerDefinitions } = taskDefinition
 
 // Only inclue properties relevant to the CLI call found in --generate-cli-skeleton
 const task = {
   family,
-  containerDefinition,
+  containerDefinitions,
 }
 
 // tag of updated image
 const image = `${process.env.IMAGE}:${process.env.CIRCLE_SHA1}`
 
 // set the container image to our updated image
-task.containerDefinition[0].image = image
+task.containerDefinitions[0].image = image
 
 // convert it to json
 const jsonTask = JSON.stringify(task)
