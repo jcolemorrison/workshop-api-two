@@ -8,6 +8,7 @@
   "scripts": {
     "lint": "eslint 'server/**/*.js'",
     "start": "nodemon .",
+    "test": "nyc --check-coverage -r text-summary yarn test:unit",
     "test:unit": "NODE_ENV=test mocha --recursive",
     "test:unit:watch": "NODE_ENV=test mocha -w --recursive",
     "test:cover": "nyc -r text-summary yarn test:unit && nyc -r html report",
