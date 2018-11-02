@@ -1,0 +1,12 @@
+.env
+.git
+.editorconfig
+.eslintrc
+.yo-rc.json
+DevDockerfile
+.nycrc
+.eslintignore
+.README.md
+coverage/
+.nyc-output/
+test/
