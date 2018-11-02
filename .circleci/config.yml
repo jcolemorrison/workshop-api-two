@@ -63,7 +63,7 @@ workflows:
           requires:
             - test
           filters:
-              branches:
+            branches:
               only:
                 - master
         
