@@ -19,7 +19,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: - node_modules-{{ .Branch }}-{{ check "yarn.lock" }}
+          key: node_modules-{{ .Branch }}-{{ check "yarn.lock" }}
       - persist_to_workspace:
           root: .
           paths:
