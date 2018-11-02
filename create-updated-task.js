@@ -5,10 +5,10 @@ const fs = require('fs')
 // grab our base task
 // this file is only available after it's been created, which will be a sure thing if this script is run
 // eslint-disable-next-line
-const { taskDefinintion } = require('./base.json')
+const { taskDefinition } = require('./base.json')
 
 // The only things we need for the update
-const { family, containerDefinition } = taskDefinintion
+const { family, containerDefinition } = taskDefinition
 
 // Only inclue properties relevant to the CLI call found in --generate-cli-skeleton
 const task = {

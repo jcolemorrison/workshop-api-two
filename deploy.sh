@@ -21,7 +21,6 @@ echo "Updating service ..."
 aws ecs describe-task-definition --task-definition $TASK_DEFINITION >> base.json
 
 # Exit if the base.json file fails to populate
-
 if [ ! -f ./base.json ]; then
   echo "base.json not found!"
   exit 1
@@ -31,7 +30,7 @@ fi
 node ./create-updated-task.js
 
 # Exit if the updated file fails to populate
-if [ ! -f ./base.json ]; then
+if [ ! -f ./updated-task.json ]; then
   echo "base.json not found!"
   exit 1
 fi
