@@ -53,17 +53,17 @@ jobs:
 
 workflows:
   version: 2
-    test_install_deploy:
-      jobs:
-        - install
-        - test:
-            requires:
-              - install
-        - deploy:
-            requires:
-              - test
-            filters:
-               branches:
-                only:
-                  - master
+  test_install_deploy:
+    jobs:
+      - install
+      - test:
+          requires:
+            - install
+      - deploy:
+          requires:
+            - test
+          filters:
+              branches:
+              only:
+                - master
         
